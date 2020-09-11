@@ -54,7 +54,7 @@ test("Clicks submit button", () => {
     fireEvent.change(lastNameInput, {target: {value: "Garrick"}});
     fireEvent.change(emailInput, {target: {value: "speedster@speedforce.com"}});
     fireEvent.change(messageInput, {target: {value: "Gotta Go Fast!!!"}});
-    await act( async()=>{
+    act( async()=>{
         fireEvent.click(submit);
     })
     expect(MockOnSubmit).toHaveBeenCalled();
